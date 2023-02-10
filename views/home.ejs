@@ -7,12 +7,12 @@
 
 <% var len= newData.length %>
 
-<% for(let i=0; i<newData.length; i++){ %>
-     <h1> <%= newData[i].titleData %> </h1>
+<% newData.forEach(function(data){ %>
+    <h1> <%= data.titleData %> </h1>
+    
+    <p>  <%=  data.postData%> </p>
 
-     <p>  <%= newData[i].postData %> </p>
-
-<% } %>
+<% }); %>
 
 
 <%- include('partials/footer'); -%>
