@@ -1,4 +1,11 @@
 
+
+
+
+
+
+
+
 </div>
 <div class="footer-padding"></div>
   <div class="footer">
@@ -6,4 +13,46 @@
   </div>
 </div>
 </body>
+<script>
+
+
+let id;
+
+
+
+function load(){
+  id=event.target.id;
+  var dots = document.getElementById("dots"+id);
+  var moreText = document.getElementById("more"+id);
+
+
+
+ 
+
+  if (dots.classList.contains("hide")) {         //if we want to show more
+
+    dots.classList.remove("hide");
+    
+    document.getElementById(id).innerHTML="read more";
+    moreText.classList.add("hide");
+
+ 
+  } else {                //if we want to show less
+   
+    dots.classList.add("hide");
+    
+    document.getElementById(id).innerHTML="read less";
+    moreText.classList.remove("hide");
+
+
+  }
+
+
+
+}
+
+
+
+
+</script>
 </html>
