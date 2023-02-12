@@ -14,20 +14,37 @@
 </div>
 </body>
 <script>
+
+
+let id;
+
+
+
 function load(){
+  id=event.target.id;
+  var dots = document.getElementById("dots"+id);
+  var moreText = document.getElementById("more"+id);
 
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
+
+ 
+
+  if (dots.classList.contains("hide")) {         //if we want to show more
+
+    dots.classList.remove("hide");
+    
+    document.getElementById(id).innerHTML="read more";
+    moreText.classList.add("hide");
+
+ 
+  } else {                //if we want to show less
+   
+    dots.classList.add("hide");
+    
+    document.getElementById(id).innerHTML="read less";
+    moreText.classList.remove("hide");
+
+
   }
 
 

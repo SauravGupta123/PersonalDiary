@@ -14,18 +14,18 @@
    <% let part1= newData[i].postData.slice(0,20); %>
    <% let part2= newData[i].postData.slice(20);  %>
 
+  <% let btnid= "myBtn"+  i.toString(); %>
+  <%  let dots= "dotsmyBtn" + i.toString(); %>
+  <%  let more= "moremyBtn" + i.toString(); %>
 
-   
 
 
 
-   <% console.log(part1); %>
-   <% console.log(".......................................");  %>
-   <% console.log(part2);  %>
-    
-    <p>  <%= part1 %> <span id="dots" >...</span> <span id=  "more" ><%=  part2 %> </span></p>
 
-    <button id= "myBtn" onclick="load()">loadmore</button>
+
+    <p>  <%= part1 %> <span id= <%= dots %> >...</span> <span id= <%= more %> class= "hide" ><%=  part2 %> </span></p>
+
+    <button id= <%= btnid %> class="btn btn-primary" onclick="load()">readmore</button>
 <% } %>
 
 
